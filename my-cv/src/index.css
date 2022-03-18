@@ -1,0 +1,22 @@
+@font-face {
+	font-family: "Press Start 2P";
+	src: url("https://fonts.googleapis.com/css?family=Press+Start+2P")
+		format("woff2");
+}
+
+/* body {
+	margin: 0;
+	font-family: "Press Start 2P";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+} */
+body {
+	cursor: url("./assets/cursor.png"), auto;
+}
+button {
+	cursor: url("./assets/pointer.png"), pointer;
+}
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
