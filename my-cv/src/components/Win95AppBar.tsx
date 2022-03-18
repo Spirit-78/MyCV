@@ -1,23 +1,35 @@
 import {
 	AppBar,
 	Toolbar,
-	TextField,
+	Panel,
 	Button,
 	List,
 	ListItem,
 	Divider,
 } from "react95";
 import logoIMG from "../assets/win95logo.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Shdocvw257, User, User7 } from "@react95/icons";
+import { formatTime } from "../functions/formatTime";
 
 export const Win95AppBar = () => {
 	const [open, setOpen] = useState(false);
+	const [time, setTime] = useState(formatTime(new Date()));
+
+	useEffect(() => {
+		setInterval(() => setTime(formatTime(new Date())), 1000);
+	});
 
 	return (
 		<div style={{ marginBottom: "60px" }}>
 			<AppBar>
 				<Toolbar style={{ justifyContent: "space-between" }}>
-					<div style={{ position: "relative", display: "inline-block" }}>
+					<div
+						style={{
+							position: "relative",
+							display: "inline-block",
+						}}
+					>
 						<Button
 							onClick={() => setOpen(!open)}
 							active={open}
@@ -43,29 +55,28 @@ export const Win95AppBar = () => {
 								onClick={() => setOpen(false)}
 							>
 								<ListItem>
-									<span role="img" aria-label="👨‍💻">
-										👨‍💻
-									</span>
+									<User variant="32x32_4" />
 									Profile
 								</ListItem>
-								<ListItem>
-									<span role="img" aria-label="📁">
-										📁
-									</span>
-									My account
+								<ListItem disabled>
+									<Shdocvw257
+										variant="32x32_4"
+										style={{ paddingRight: "10px" }}
+									/>
+									The Internet
 								</ListItem>
 								<Divider />
-								<ListItem disabled>
-									<span role="img" aria-label="🔙">
-										🔙
-									</span>
-									Logout
+								<ListItem>
+									<User7 variant="32x32_4" />
+									Log Out
 								</ListItem>
 							</List>
 						)}
 					</div>
-
-					<TextField placeholder="Search..." width={150} />
+					<Panel variant="well" style={{ padding: "5px" }}>
+						{time}
+					</Panel>
+					{/* <TextField placeholder="Search..." width={150} /> */}
 				</Toolbar>
 			</AppBar>
 		</div>
