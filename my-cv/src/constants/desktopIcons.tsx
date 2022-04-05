@@ -9,6 +9,12 @@ import {
 	Textchat,
 } from "@react95/icons";
 import { AboutMe } from "../components/AboutMe";
+import { ContactMe } from "../components/ContactMe";
+import { DownloadCV } from "../components/DownloadCV";
+import { Education } from "../components/Education";
+import { Interests } from "../components/Interests";
+import { Languages } from "../components/Languages";
+import { Skills } from "../components/Skills";
 import { WorkExperience } from "../components/WorkExperience";
 import { desktopIcon } from "../models/desktop";
 
@@ -25,7 +31,7 @@ export const desktopIconsList: desktopIcon[] = [
 		iconTitle: "Education",
 		selectedStyle: false,
 		clicked: false,
-		content: "",
+		content: <Education />,
 	},
 	{
 		icon: <Desk100 variant="32x32_4" />,
@@ -39,34 +45,34 @@ export const desktopIconsList: desktopIcon[] = [
 		iconTitle: "Skills",
 		selectedStyle: false,
 		clicked: false,
-		content: "",
+		content: <Skills />,
 	},
 	{
 		icon: <Textchat variant="32x32_4" />,
 		iconTitle: "Languages",
 		selectedStyle: false,
 		clicked: false,
-		content: "",
+		content: <Languages />,
 	},
 	{
 		icon: <Gcdef100 variant="32x32_4" />,
 		iconTitle: "Interests",
 		selectedStyle: false,
 		clicked: false,
-		content: "",
+		content: <Interests />,
 	},
 	{
 		icon: <Mapi32501 variant="32x32_4" />,
 		iconTitle: "Contact Me",
 		selectedStyle: false,
 		clicked: false,
-		content: "",
+		content: <ContactMe />,
 	},
 	{
 		icon: <Explorer102 variant="32x32_4" />,
 		iconTitle: "Download CV",
 		selectedStyle: false,
 		clicked: false,
-		content: "",
+		content: <DownloadCV />,
 	},
 ];
