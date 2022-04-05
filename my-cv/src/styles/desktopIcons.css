@@ -1,3 +1,15 @@
+.desktopIcon {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	width: 5%;
+}
+
 .desktopIcon:hover {
 	cursor: url("../assets/pointer.png"), pointer;
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { desktopIcon } from "../models/desktop";
+import { desktopIconsList } from "../constants/desktopIcons";
+import { selectedIcon } from "../models/desktop";
 import "../styles/desktopIcons.css";
 
 const defaultStyle = {
@@ -14,31 +15,37 @@ const selectedStyle = {
 	color: "white",
 };
 
-export const DesktopIcon = (props: desktopIcon) => {
-	const [clickedStyle, setClickedStyle] = useState(defaultStyle);
+export const DesktopIcon = () => {
+	const [selectedIcon, setSelectedIcon] = useState(
+		desktopIconsList.reduce(
+			(obj, item) => ({ ...obj, [item.iconTitle]: item.selectedStyle }),
+			{}
+		) as selectedIcon
+	);
+
+	const handleSelectedIcon = (iconTitle: string) => {
+		const tempSelectedIcon = { ...selectedIcon };
+		Object.keys(tempSelectedIcon).forEach((v) => (tempSelectedIcon[v] = false));
+		tempSelectedIcon[iconTitle] = true;
+		setSelectedIcon(tempSelectedIcon);
+	};
 	return (
-		<button
-			className="desktopIcon"
-			key={props.iconTitle}
-			style={{
-				display: "flex",
-				flexDirection: "column",
-				margin: "10px",
-				padding: "10px",
-				justifyContent: "center",
-				alignItems: "center",
-				alignContent: "center",
-				textAlign: "center",
-				border: clickedStyle.border,
-				backgroundColor: clickedStyle.backgroundColor,
-				color: clickedStyle.color,
-				width: "5%",
-			}}
-			onClick={() => setClickedStyle(selectedStyle)}
-		>
-			{props.icon}
-			<br />
-			<p>{props.iconTitle}</p>
-		</button>
+		<>
+			{desktopIconsList.map((icon) => (
+				<button
+					className="desktopIcon"
+					key={icon.iconTitle}
+					style={
+						selectedIcon[icon.iconTitle as any] ? selectedStyle : defaultStyle
+					}
+					onClick={() => handleSelectedIcon(icon.iconTitle)}
+				>
+					{icon.icon}
+					<br />
+					<p>{icon.iconTitle}</p>
+				</button>
+			))}
+			{/* modal here ** */}
+		</>
 	);
 };

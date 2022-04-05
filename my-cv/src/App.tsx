@@ -9,7 +9,6 @@ import ms_sans_serif_bold from "react95/dist/fonts/ms_sans_serif_bold.woff2";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { DesktopIcon } from "./components/DesktopIcon";
 import "@react95/icons/icons.css";
-import { desktopIconsList } from "./constants/desktopIcons";
 // import { useClippy, ClippyProvider } from "@react95/clippy";
 
 const GlobalStyles = createGlobalStyle`
@@ -39,9 +38,10 @@ function App() {
 			<ThemeProvider theme={original}>
 				<Win95AppBar />
 				<div style={{ display: "flex", flexDirection: "column" }}>
-					{desktopIconsList.map((icon) => (
+					{/* {desktopIconsList.map((icon) => (
 						<DesktopIcon {...icon} />
-					))}
+					))} */}
+					<DesktopIcon />
 				</div>
 			</ThemeProvider>
 		</div>
