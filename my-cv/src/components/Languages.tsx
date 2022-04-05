@@ -10,7 +10,7 @@ export const Languages = () => {
 					<span className="fi fi-gb infoFlags"></span>
 				</Frame>
 				<div>
-					<p className="infoTitle infoText">C2 - Full Working Proficiency</p>
+					<p className="infoText">C2 - Full Working Proficiency</p>
 					{/* <p className="infoText">{`Professional experience working with foreign clients`}</p> */}
 					{/* <p className="infoText">{`hobbies allowing me to integrate it to my daily life`}</p> */}
 				</div>
@@ -21,7 +21,7 @@ export const Languages = () => {
 					<span className="fi fi-mk infoFlags"></span>
 				</Frame>
 				<div>
-					<p className="infoTitle infoText">C2 - Native Speaker</p>
+					<p className="infoText">C2 - Native Speaker</p>
 				</div>
 			</Fieldset>
 
@@ -30,7 +30,7 @@ export const Languages = () => {
 					<span className="fi fi-de infoFlags"></span>
 				</Frame>
 				<div>
-					<p className="infoTitle infoText">A2 - Elementary Proficiency</p>
+					<p className="infoText">A2 - Elementary Proficiency</p>
 				</div>
 			</Fieldset>
 
@@ -39,7 +39,7 @@ export const Languages = () => {
 					<span className="fi fi-es infoFlags"></span>
 				</Frame>
 				<div>
-					<p className="infoTitle infoText">A1 - Beginner</p>
+					<p className="infoText">A1 - Beginner</p>
 				</div>
 			</Fieldset>
 		</Frame>
