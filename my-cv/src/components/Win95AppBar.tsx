@@ -36,6 +36,7 @@ export const Win95AppBar = () => {
 							style={{
 								fontWeight: "bold",
 							}}
+							className="appBar"
 						>
 							<img
 								src={logoIMG}
