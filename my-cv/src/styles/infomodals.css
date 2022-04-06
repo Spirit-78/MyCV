@@ -26,6 +26,10 @@
 	align-items: center;
 }
 
+.fieldsetRow {
+	margin: 10px;
+}
+
 .infoFlags {
 	width: 100%;
 	height: 100%;
@@ -34,7 +38,7 @@
 
 .infoContainer {
 	display: inline-block;
-	width: 300px;
+	width: 450px;
 }
 
 .infoImage {

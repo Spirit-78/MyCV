@@ -9,7 +9,9 @@ import ms_sans_serif_bold from "react95/dist/fonts/ms_sans_serif_bold.woff2";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { DesktopIcon } from "./components/DesktopIcon";
 import "./index.css";
-// import { useClippy, ClippyProvider } from "@react95/clippy";
+import { ClippyProvider } from "@react95/clippy";
+import { useState } from "react";
+import { Clippy } from "./components/Clippy";
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -32,6 +34,10 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 function App() {
+	const [showClippy, setShowClippy] = useState(false);
+
+	setInterval(() => setShowClippy(!showClippy), 10000);
+
 	return (
 		<div>
 			<GlobalStyles />
@@ -43,6 +49,11 @@ function App() {
 					))} */}
 					<DesktopIcon />
 				</div>
+				{showClippy && (
+					<ClippyProvider>
+						<Clippy />
+					</ClippyProvider>
+				)}
 			</ThemeProvider>
 		</div>
 	);

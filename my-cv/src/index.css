@@ -21,6 +21,11 @@ button {
 	cursor: url("./assets/pointer.png"), pointer;
 	font-family: "ms_sans_serif" !important;
 }
+
+p {
+	font-family: "ms_sans_serif" !important;
+}
+
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
