@@ -1,6 +1,7 @@
 import { Tabs, Tab, Fieldset, Checkbox, Frame } from "@react95/core";
 import MiracleMill from "../assets/MiracleMill.png";
 import Exelerate from "../assets/exelerate.png";
+import "../styles/infomodals.css";
 
 export const WorkExperience = () => {
 	return (
@@ -10,11 +11,11 @@ export const WorkExperience = () => {
 					legend="Software Engineer - Full-time"
 					style={{ marginBottom: "1em" }}
 				>
-					<Frame width={55} height={55} margin={5} display={"inline-block"}>
+					<Frame className="infoFrame">
 						<img
 							src={MiracleMill}
 							alt="MiracleMill logo"
-							style={{ height: "45px", width: "45px", margin: "5px" }}
+							className="infoImage"
 						/>
 					</Frame>
 					<div style={{ display: "inline-block" }}>
@@ -48,12 +49,8 @@ export const WorkExperience = () => {
 					legend="Software Engineer - Full-time"
 					style={{ marginBottom: "1em" }}
 				>
-					<Frame width={55} height={55} margin={5} display={"inline-block"}>
-						<img
-							src={Exelerate}
-							alt="Exelerate logo"
-							style={{ height: "45px", width: "45px", margin: "5px" }}
-						/>
+					<Frame className="infoFrame">
+						<img src={Exelerate} alt="Exelerate logo" className="infoImage" />
 					</Frame>
 					<div style={{ display: "inline-block" }}>
 						<p style={{ marginLeft: 22, marginTop: 4, marginBottom: 5 }}>
@@ -69,12 +66,8 @@ export const WorkExperience = () => {
 					legend="Engineering Intern - Internship"
 					style={{ marginBottom: "1em" }}
 				>
-					<Frame width={55} height={55} margin={5} display={"inline-block"}>
-						<img
-							src={Exelerate}
-							alt="Exelerate logo"
-							style={{ height: "45px", width: "45px", margin: "5px" }}
-						/>
+					<Frame className="infoFrame">
+						<img src={Exelerate} alt="Exelerate logo" className="infoImage" />
 					</Frame>
 					<div style={{ display: "inline-block" }}>
 						<p style={{ marginLeft: 22, marginTop: 4, marginBottom: 5 }}>

@@ -27,7 +27,30 @@
 }
 
 .infoFlags {
-	width: 35px;
-	height: 25px;
+	width: 100%;
+	height: 100%;
 	margin: 3px;
+}
+
+.infoContainer {
+	display: inline-block;
+	width: 300px;
+}
+
+.infoImage {
+	height: 45px;
+	width: 45px;
+	margin: 5px;
+}
+
+.infoFrame {
+	width: 55px !important;
+	height: 55px !important;
+	margin: 5px;
+	display: inline-block;
+}
+
+.infoCheckbox {
+	margin: 15px;
+	display: block;
 }

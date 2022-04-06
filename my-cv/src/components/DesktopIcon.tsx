@@ -71,12 +71,9 @@ export const DesktopIcon = () => {
 				Object.keys(selectedIcon)
 					.filter((title) => selectedIcon[title].opened)
 					.map((openedTitle) => {
-						console.log("FILTERED: ", openedTitle);
 						const openedObject = desktopIconsList.find(
 							(obj) => obj.iconTitle === openedTitle
 						);
-						console.log("FOUND: ", openedObject);
-
 						return (
 							<Modal
 								key={openedObject!.iconTitle}
@@ -113,7 +110,15 @@ export const DesktopIcon = () => {
 										name: "Edit",
 										list: (
 											<List>
-												<List.Item>Copy</List.Item>
+												<List.Item
+												// onClick={() => {
+												// 	navigator.clipboard.writeText(
+												// 		state.textToCopy
+												// 	);
+												// }}
+												>
+													Copy
+												</List.Item>
 											</List>
 										),
 									},
