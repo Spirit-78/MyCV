@@ -36,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
 function App() {
 	const [showClippy, setShowClippy] = useState(false);
 
-	setInterval(() => setShowClippy(!showClippy), 10000);
+	setTimeout(() => setShowClippy(true), 5000);
 
 	return (
 		<div>

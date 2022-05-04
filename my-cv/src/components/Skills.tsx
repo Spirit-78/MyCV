@@ -72,7 +72,11 @@ export const Skills = () => {
 				</Checkbox>
 			</Fieldset>
 
-			<Fieldset legend="Hobby" className="fieldsetRow" style={{ flex: "25%" }}>
+			<Fieldset
+				legend="Hobbies"
+				className="fieldsetRow"
+				style={{ flex: "25%" }}
+			>
 				<Checkbox checked style={{ display: "block", margin: 15 }}>
 					Cybersecurity
 				</Checkbox>

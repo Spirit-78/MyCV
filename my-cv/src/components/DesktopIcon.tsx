@@ -31,7 +31,6 @@ export const DesktopIcon = () => {
 			{}
 		) as selectedIcon
 	);
-	console.log(List);
 
 	const handleSelectedIcon = (iconTitle: string) => {
 		const tempSelectedIcon = { ...selectedIcon };
