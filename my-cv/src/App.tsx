@@ -1,5 +1,4 @@
 import "@react95/icons/icons.css";
-import { Win95AppBar } from "./components/Win95AppBar";
 import { styleReset } from "react95";
 // pick a theme of your choice
 import original from "react95/dist/themes/original";
@@ -7,11 +6,8 @@ import original from "react95/dist/themes/original";
 import ms_sans_serif from "react95/dist/fonts/ms_sans_serif.woff2";
 import ms_sans_serif_bold from "react95/dist/fonts/ms_sans_serif_bold.woff2";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { DesktopIcon } from "./components/DesktopIcon";
 import "./index.css";
-import { ClippyProvider } from "@react95/clippy";
-import { useState } from "react";
-import { Clippy } from "./components/Clippy";
+import { Desktop } from "./pages/Desktop";
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -34,26 +30,11 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 function App() {
-	const [showClippy, setShowClippy] = useState(false);
-
-	setTimeout(() => setShowClippy(true), 5000);
-
 	return (
 		<div>
 			<GlobalStyles />
 			<ThemeProvider theme={original}>
-				<Win95AppBar />
-				<div style={{ display: "flex", flexDirection: "column" }}>
-					{/* {desktopIconsList.map((icon) => (
-						<DesktopIcon {...icon} />
-					))} */}
-					<DesktopIcon />
-				</div>
-				{showClippy && (
-					<ClippyProvider>
-						<Clippy />
-					</ClippyProvider>
-				)}
+				<Desktop />
 			</ThemeProvider>
 		</div>
 	);

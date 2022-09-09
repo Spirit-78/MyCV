@@ -1,6 +1,7 @@
 import { Fieldset, Frame } from "@react95/core";
 import { GrLinkedin } from "react-icons/gr";
 import { BsWhatsapp } from "react-icons/bs";
+import { Mail } from "@react95/icons";
 
 export const ContactMe = () => {
 	return (
@@ -13,23 +14,53 @@ export const ContactMe = () => {
 			</Fieldset>
 
 			<Fieldset legend="Email" className="fieldsetColumn">
-				{/* mailto: link?? icon of mail? */}
-				<Frame className="languageFrame"></Frame>
-				<a
-					href="mailto:elena_papazova@hotmail.com"
-					className="infoText"
-					style={{ color: "blue" }}
+				<div
+					style={{
+						display: "flex",
+						flexFlow: "row",
+						padding: "10px",
+						alignItems: "center",
+						justifyItems: "left",
+					}}
 				>
-					elena_papazova@hotmail.com
-				</a>
+					<Mail variant="32x32_4" />
+					<a
+						href="mailto:elena_papazova@hotmail.com"
+						className="infoText"
+						style={{ color: "blue" }}
+					>
+						elena_papazova@hotmail.com
+					</a>
+				</div>
 			</Fieldset>
 
 			<Fieldset legend="Social Media" className="fieldsetColumn">
 				{/* icon of linkedin/ etc.. */}
-				<GrLinkedin size={25} />
-				<p className="infoText">elena.papazova</p>
-				<BsWhatsapp size={25} />
-				<p className="infoText">+38977926520</p>
+				<div
+					style={{
+						display: "flex",
+						flexFlow: "row",
+						padding: "10px",
+						alignItems: "center",
+						justifyItems: "left",
+					}}
+				>
+					<GrLinkedin size={25} color="DodgerBlue" />
+					<p className="infoText">elena.papazova</p>
+				</div>
+
+				<div
+					style={{
+						display: "flex",
+						flexFlow: "row",
+						padding: "10px",
+						alignItems: "center",
+						justifyItems: "left",
+					}}
+				>
+					<BsWhatsapp size={25} color="ForestGreen" />
+					<p className="infoText">+38977926520</p>
+				</div>
 			</Fieldset>
 		</Frame>
 	);

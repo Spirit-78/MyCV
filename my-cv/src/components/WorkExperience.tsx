@@ -6,7 +6,7 @@ import "../styles/infomodals.css";
 export const WorkExperience = () => {
 	return (
 		<Tabs style={{ width: 350 }} defaultActiveTab="Miracle Mill">
-			<Tab title="Miracle Mill">
+			<Tab title="Miracle Mill (2022)">
 				<Fieldset
 					legend="Software Engineer - Full-time"
 					style={{ marginBottom: "1em" }}
@@ -33,6 +33,9 @@ export const WorkExperience = () => {
 						React.js/node.js/typescript/javascript
 					</Checkbox>
 					<Checkbox checked style={{ display: "block", margin: 15 }}>
+						HTML/CSS
+					</Checkbox>
+					<Checkbox checked style={{ display: "block", margin: 15 }}>
 						REST Calls
 					</Checkbox>
 					<Checkbox checked style={{ display: "block", margin: 15 }}>
@@ -44,7 +47,7 @@ export const WorkExperience = () => {
 				</Fieldset>
 			</Tab>
 
-			<Tab title="Exelerate">
+			<Tab title="Exelerate (2021)">
 				<Fieldset
 					legend="Software Engineer - Full-time"
 					style={{ marginBottom: "1em" }}

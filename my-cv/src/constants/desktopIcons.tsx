@@ -12,7 +12,7 @@ import { AboutMe } from "../components/AboutMe";
 import { ContactMe } from "../components/ContactMe";
 import { DownloadCV } from "../components/DownloadCV";
 import { Education } from "../components/Education";
-import { Interests } from "../components/Interests";
+import { Projects } from "../components/Interests";
 import { Languages } from "../components/Languages";
 import { Skills } from "../components/Skills";
 import { WorkExperience } from "../components/WorkExperience";
@@ -56,10 +56,10 @@ export const desktopIconsList: desktopIcon[] = [
 	},
 	{
 		icon: <Gcdef100 variant="32x32_4" />,
-		iconTitle: "Interests",
+		iconTitle: "Projects",
 		selectedStyle: false,
 		clicked: false,
-		content: <Interests />,
+		content: <Projects />,
 	},
 	{
 		icon: <Mapi32501 variant="32x32_4" />,
