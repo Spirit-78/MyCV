@@ -58,3 +58,28 @@
 	margin: 15px;
 	display: block;
 }
+
+.text-area {
+	outline: none;
+	border: 2px solid black;
+	cursor: text;
+	padding: 3 3 5 3;
+	color: black;
+	background-color: white;
+	border-radius: 0;
+	border-top-width: 5;
+	border-top-style: 5;
+	border-top-color: grey;
+	border-right-width: 0;
+	border-bottom-width: 0;
+	border-left-width: 5;
+	border-left-style: 5;
+	border-left-color: grey;
+	box-shadow: darkgray;
+
+	width: 350px;
+	height: 150px;
+
+	/* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+}

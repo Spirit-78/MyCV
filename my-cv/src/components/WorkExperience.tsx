@@ -5,7 +5,7 @@ import "../styles/infomodals.css";
 
 export const WorkExperience = () => {
 	return (
-		<Tabs style={{ width: 350 }} defaultActiveTab="Miracle Mill">
+		<Tabs style={{ width: 350 }} defaultActiveTab="Miracle Mill (2022)">
 			<Tab title="Miracle Mill (2022)">
 				<Fieldset
 					legend="Software Engineer - Full-time"

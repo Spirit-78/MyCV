@@ -1,10 +1,8 @@
-// import { List, Modal } from "@react95/core";
-import { Modal, List } from "@react95/core";
+import { Modal, List, ThemeProvider } from "@react95/core";
 import { ReactElement, useState } from "react";
 import { desktopIconsList } from "../constants/desktopIcons";
 import { selectedIcon } from "../models/desktop";
 import "../styles/desktopIcons.css";
-import { ThemeProvider } from "@react95/core";
 
 const defaultStyle = {
 	backgroundColor: "transparent",

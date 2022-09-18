@@ -26,7 +26,9 @@ export const ContactMe = () => {
 					<Mail variant="32x32_4" />
 					<a
 						href="mailto:elena_papazova@hotmail.com"
+						target="_blank"
 						className="infoText"
+						rel="noreferrer"
 						style={{ color: "blue" }}
 					>
 						elena_papazova@hotmail.com
@@ -49,7 +51,9 @@ export const ContactMe = () => {
 					{/* <p className="infoText"> */}
 					<a
 						href="https://www.linkedin.com/in/elena-papazova-75375620a/"
+						target="_blank"
 						className="infoText"
+						rel="noreferrer"
 						style={{ color: "blue" }}
 					>
 						Elena Papazova
