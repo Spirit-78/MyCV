@@ -12,7 +12,7 @@ import { AboutMe } from "../components/AboutMe";
 import { ContactMe } from "../components/ContactMe";
 import { DownloadCV } from "../components/DownloadCV";
 import { Education } from "../components/Education";
-import { Projects } from "../components/Interests";
+import { Projects } from "../components/Projects";
 import { Languages } from "../components/Languages";
 import { Skills } from "../components/Skills";
 import { WorkExperience } from "../components/WorkExperience";

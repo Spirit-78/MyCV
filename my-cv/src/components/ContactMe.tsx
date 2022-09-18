@@ -46,7 +46,15 @@ export const ContactMe = () => {
 					}}
 				>
 					<GrLinkedin size={25} color="DodgerBlue" />
-					<p className="infoText">elena.papazova</p>
+					{/* <p className="infoText"> */}
+					<a
+						href="https://www.linkedin.com/in/elena-papazova-75375620a/"
+						className="infoText"
+						style={{ color: "blue" }}
+					>
+						Elena Papazova
+					</a>
+					{/* </p> */}
 				</div>
 
 				<div

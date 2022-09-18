@@ -1,16 +1,59 @@
 import { Fieldset, Frame } from "@react95/core";
-import profilePicture from "../assets/profile.png";
-import AWS from "../assets/AWS.png";
-import cybersecurity from "../assets/cybersecurity.png";
+import { useState } from "react";
+import {
+	hobbyPictures,
+	profilePictures,
+	workPictures,
+} from "../constants/aboutMePictures";
 import "../styles/infomodals.css";
 
+interface Counter {
+	[section: string]: number;
+}
+
 export const AboutMe = () => {
+	const [profilePicture, setProfilePicture] = useState(profilePictures[0]);
+	const [workPicture, setWorkPicture] = useState(workPictures[0]);
+	const [hobbyPicture, setHobbyPicture] = useState(hobbyPictures[0]);
+	const [pictureCounter, setPictureCounter] = useState<Counter>({
+		profile: 0,
+		work: 0,
+		hobby: 0,
+	});
+
+	const mappedSections: { [section: string]: (i: number) => any } = {
+		profile: (i: number) =>
+			setProfilePicture(profilePictures[i % profilePictures.length]),
+		work: (i: number) => setWorkPicture(workPictures[i % workPictures.length]),
+		hobby: (i: number) =>
+			setHobbyPicture(hobbyPictures[i % hobbyPictures.length]),
+	};
+
+	const cycleImage = (section: string) => {
+		setPictureCounter({
+			...pictureCounter,
+			[section]: pictureCounter[section] + 1,
+		});
+		mappedSections[section](pictureCounter[section]);
+	};
+
 	return (
 		<Frame>
 			<Fieldset legend="Who am I" className="fieldsetColumn">
 				<Frame className="infoFrame">
-					<img src={profilePicture} alt="Profile" className="infoImage" />
+					<button
+						onClick={() => cycleImage("profile")}
+						style={{
+							background: "transparent",
+							border: "none",
+							margin: 0,
+							padding: 0,
+						}}
+					>
+						<img src={profilePicture} alt="Profile" className="infoImage" />
+					</button>
 				</Frame>
+
 				<div className="infoContainer">
 					<p style={{ marginLeft: 22, marginTop: 4, marginBottom: 5 }}>
 						Hello! I'm a computer science student working on her bachelor's
@@ -23,7 +66,17 @@ export const AboutMe = () => {
 
 			<Fieldset legend="What I do" className="fieldsetColumn">
 				<Frame className="infoFrame">
-					<img src={AWS} alt="AWS" className="infoImage" />
+					<button
+						onClick={() => cycleImage("work")}
+						style={{
+							background: "transparent",
+							border: "none",
+							margin: 0,
+							padding: 0,
+						}}
+					>
+						<img src={workPicture} alt="AWS" className="infoImage" />
+					</button>
 				</Frame>
 				<div className="infoContainer">
 					<p style={{ marginLeft: 22, marginTop: 4, marginBottom: 5 }}>
@@ -40,7 +93,17 @@ export const AboutMe = () => {
 
 			<Fieldset legend="What I like" className="fieldsetColumn">
 				<Frame className="infoFrame">
-					<img src={cybersecurity} alt="Profile" className="infoImage" />
+					<button
+						onClick={() => cycleImage("hobby")}
+						style={{
+							background: "transparent",
+							border: "none",
+							margin: 0,
+							padding: 0,
+						}}
+					>
+						<img src={hobbyPicture} alt="Profile" className="infoImage" />
+					</button>
 				</Frame>
 				<div className="infoContainer">
 					<p style={{ marginLeft: 22, marginTop: 4, marginBottom: 5 }}>
