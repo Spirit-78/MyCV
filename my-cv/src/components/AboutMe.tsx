@@ -16,9 +16,9 @@ export const AboutMe = () => {
 	const [workPicture, setWorkPicture] = useState(workPictures[0]);
 	const [hobbyPicture, setHobbyPicture] = useState(hobbyPictures[0]);
 	const [pictureCounter, setPictureCounter] = useState<Counter>({
-		profile: 0,
-		work: 0,
-		hobby: 0,
+		profile: 1,
+		work: 1,
+		hobby: 1,
 	});
 
 	const mappedSections: { [section: string]: (i: number) => any } = {

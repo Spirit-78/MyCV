@@ -73,6 +73,26 @@ export const Education = () => {
 					>
 						Credential ID: VW1M6VVBHNRQ1P9K
 					</p>
+					<p
+						style={{
+							marginLeft: 22,
+							marginTop: 4,
+							marginBottom: 5,
+							fontWeight: "bolder",
+						}}
+					>
+						AWS Developer Associate
+					</p>
+					<p
+						style={{
+							marginLeft: 22,
+							marginTop: 4,
+							marginBottom: 5,
+							fontStyle: "italic",
+						}}
+					>
+						Credential ID: SX4Q16CC62BQQ1WT
+					</p>
 					<br />
 					<p
 						style={{
